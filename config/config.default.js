@@ -14,14 +14,15 @@ module.exports = appInfo => {
     // use for cookie sign key, should change to your own and keep security
     keys: appInfo.name + '_1592970010813_9960',
     // add your middleware config here
-    middleware: [],
+    middleware: ['userAgent'],
     gzip: {
       minSize: 1024
     },
     validate: {
       convert: true
     },
-    errorCode: {
+    responseCode: {
+      success: 0,
       common: 1000,
       invalid: 1001,
       missing_field: 1002
